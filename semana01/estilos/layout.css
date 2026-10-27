@@ -2,10 +2,10 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f9fa;
-    color: #333333;
+    background-color: #ffffff;
+    color: #000000;
 
-    /* Aplicando CSS Grid no body para organizar o layout verticalmente */
+    /* Grid vertical para Header, Área Central e Footer */
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
@@ -13,43 +13,72 @@ body {
 
 /* Estilização do Header */
 header {
-    background-color: #1e293b;
+    background-color: #333333;
     color: #ffffff;
-    padding: 1.5rem 2rem;
+    padding: 1rem 2rem;
 }
 
 header h1 {
     margin: 0 0 1rem 0;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
-/* Menu de Navegação usando Flexbox */
+/* Menu de Navegação usando Flexbox (Barra preta inferior do header) */
 nav {
     display: flex;
-    gap: 2rem;
+    background-color: #000000;
+    padding: 0.8rem 1rem;
+    gap: 3rem;
+    justify-content: flex-start;
 }
 
 nav a {
-    color: #94a3b8;
+    color: #ffffff;
     text-decoration: none;
-    font-weight: 600;
-    transition: color 0.2s ease;
+    font-size: 0.95rem;
 }
 
 nav a:hover {
-    color: #ffffff;
+    text-decoration: underline;
 }
 
-/* Conteudo Principal */
+/* Área central dividida em duas colunas (Main e Aside) */
+.container-central {
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* Main ocupa mais espaço, Aside ocupa menos */
+}
+
+/* Conteúdo Principal */
 main {
+    background-color: #cccccc;
     padding: 2rem;
+    min-height: 350px;
 }
 
-/* Rodape */
+main h2 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    font-weight: normal;
+}
+
+/* Barra Lateral (Aside) */
+aside {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-left: 1px solid #ddd;
+}
+
+aside h2 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    font-weight: normal;
+}
+
+/* Rodapé */
 footer {
-    background-color: #0f172a;
-    color: #94a3b8;
+    background-color: #333333;
+    color: #ffffff;
     text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-size: 1rem;
 }
