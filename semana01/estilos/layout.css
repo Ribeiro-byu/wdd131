@@ -2,8 +2,8 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #faf8f5; /* Creme muito suave para o fundo geral */
+    color: #2c2c2c;
 
     /* Grid vertical para Header, Área Central e Footer */
     display: grid;
@@ -13,44 +13,48 @@ body {
 
 /* Estilização do Header */
 header {
-    background-color: #333333;
-    color: #ffffff;
-    padding: 1rem 2rem;
+    background-color: #f7d6c8; /* Tom pastel de pêssego/laranja muito suave */
+    color: #4a3830; /* Tom escuro aconchegante para leitura perfeita */
+    padding: 1.2rem 2rem;
 }
 
 header h1 {
-    margin: 0 0 1rem 0;
+    margin: 0 0 0.8rem 0;
     font-size: 1.2rem;
+    font-weight: 600;
 }
 
-/* Menu de Navegação usando Flexbox (Barra preta inferior do header) */
+/* Menu de Navegação usando Flexbox */
 nav {
     display: flex;
-    background-color: #000000;
+    background-color: #edd1c2; /* Tom pastel ligeiramente diferenciado para a barra */
     padding: 0.8rem 1rem;
     gap: 3rem;
     justify-content: flex-start;
 }
 
 nav a {
-    color: #ffffff;
+    color: #5c4033; /* Castanho elegante com alto contraste */
     text-decoration: none;
     font-size: 0.95rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
 }
 
 nav a:hover {
+    color: #1a1a1a;
     text-decoration: underline;
 }
 
 /* Área central dividida em duas colunas (Main e Aside) */
 .container-central {
     display: grid;
-    grid-template-columns: 3fr 1fr; /* Main ocupa mais espaço, Aside ocupa menos */
+    grid-template-columns: 3fr 1fr;
 }
 
 /* Conteúdo Principal */
 main {
-    background-color: #cccccc;
+    background-color: #fffdf9; /* Fundo creme pastel bem claro */
     padding: 2rem;
     min-height: 350px;
 }
@@ -58,26 +62,26 @@ main {
 main h2 {
     margin-top: 0;
     font-size: 1.1rem;
-    font-weight: normal;
+    color: #b86538; /* Laranja queimado suave para destacar com harmonia */
 }
 
 /* Barra Lateral (Aside) */
 aside {
-    background-color: #ffffff;
+    background-color: #f4ede2; /* Tom creme/areia pastel */
     padding: 2rem;
-    border-left: 1px solid #ddd;
+    border-left: 1px solid #e8dec8;
 }
 
 aside h2 {
     margin-top: 0;
     font-size: 1.1rem;
-    font-weight: normal;
+    color: #b86538;
 }
 
 /* Rodapé */
 footer {
-    background-color: #333333;
-    color: #ffffff;
+    background-color: #f7d6c8; /* A combinar perfeitamente com o header */
+    color: #4a3830;
     text-align: center;
     padding: 1.5rem;
     font-size: 1rem;
