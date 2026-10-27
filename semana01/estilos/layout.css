@@ -1,0 +1,55 @@
+/* Configurações Globais e Grid no Body */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333333;
+
+    /* Aplicando CSS Grid no body para organizar o layout verticalmente */
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+/* Estilização do Header */
+header {
+    background-color: #1e293b;
+    color: #ffffff;
+    padding: 1.5rem 2rem;
+}
+
+header h1 {
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+}
+
+/* Menu de Navegação usando Flexbox */
+nav {
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+/* Conteudo Principal */
+main {
+    padding: 2rem;
+}
+
+/* Rodape */
+footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
