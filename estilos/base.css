@@ -1,0 +1,198 @@
+/* Configurações Gerais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #1f4e79;
+    color: #ffffff;
+    text-align: center;
+}
+
+#titulo-curso {
+    display: block;
+    font-size: 1.15rem;
+    font-weight: 400;
+    padding: 1rem 0;
+    letter-spacing: 0.5px;
+}
+
+/* Menu de Navegação com Flexbox e barra escura */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #2b2b2b;
+    gap: 4rem;
+    padding: 0.75rem 0;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: #63b3ed;
+    text-decoration: underline;
+}
+
+/* Conteúdo Principal */
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2b2b2b;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+/* Layout de Grade (Grid) para os Cartões */
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilo dos Cartões */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #a0aec0;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+    background-color: #1f4e79;
+    color: #ffffff;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 0.75rem;
+    font-weight: 600;
+}
+
+/* Organização Interna do Cartão 'Sobre Mim' */
+.perfil-container {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 1.25rem;
+}
+
+.perfil-container p {
+    font-size: 0.95rem;
+    color: #2d3748;
+}
+
+.perfil-container img {
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+/* Sub-seção do Brasil */
+.sub-secao {
+    padding: 0 1.25rem 1.25rem 1.25rem;
+}
+
+.sub-secao h3 {
+    text-align: center;
+    font-size: 1rem;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+}
+
+.sub-secao hr {
+    border: 0;
+    border-top: 1px solid #cbd5e0;
+    margin-bottom: 1rem;
+}
+
+.pais-container {
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+}
+
+.bandeira-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 120px;
+}
+
+.legenda-bandeira {
+    font-size: 0.75rem;
+    font-style: italic;
+    color: #4a5568;
+    text-align: center;
+    margin-top: 0.4rem;
+}
+
+.pais-container p {
+    font-size: 0.95rem;
+    color: #2d3748;
+}
+
+/* Lista de Recursos Web Dev (Cartão Direito) */
+.recursos-lista {
+    list-style-type: disc;
+    padding: 2rem 2rem 2rem 3rem;
+}
+
+.recursos-lista li {
+    margin-bottom: 0.8rem;
+}
+
+.recursos-lista a {
+    color: #0066cc;
+    text-decoration: underline;
+    font-size: 0.95rem;
+}
+
+.recursos-lista a:hover {
+    color: #004080;
+}
+
+/* Rodapé */
+footer {
+    background-color: #1f4e79;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0.25rem 0;
+}
+
+#ultimaModificacao {
+    color: #ffd700;
+    font-size: 0.85rem;
+}

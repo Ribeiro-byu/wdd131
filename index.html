@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 – Fundamentos da Web Dinâmica - Eliza Ribeiro</title>
+    <meta name="description" content="WDD 131 – Fundamentos da Web Dinâmica. Página inicial de Eliza Ribeiro contendo informações pessoais, links de estudos e projetos do curso.">
+    <meta name="author" content="Eliza Ribeiro">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="estilos/base.css">
+    <!-- JavaScript com defer -->
+    <script src="scripts/obterdatas.js" defer></script>
+</head>
+<body>
+    <header>
+        <span id="titulo-curso">WDD 131: Fundamentos da Web Dinâmica - Eliza Ribeiro</span>
+        <nav>
+            <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+            <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=por&id=p7#p7" target="_blank">Escritura</a>
+            <a href="#" target="_blank">Projeto Final</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Eliza Ribeiro</h1>
+        
+        <div class="grid">
+            <!-- Cartão Esquerdo: Sobre Mim e Curitiba -->
+            <section class="card">
+                <h2>Sobre Mim</h2>
+                <div class="perfil-container">
+                    <p>
+                        Olá! Meu nome é Eliza Ribeiro, sou de Curitiba - PR. 
+                        Gosto muito de passear com meus filhos e comer chocolate. 
+                        Estou entusiasmada com o curso de programação. Está sendo um grande desafio, mas estou gostando muito.
+                    </p>
+                    <img src="imagens/perfil.jpg" alt="Foto de perfil de Eliza Ribeiro" width="150">
+                </div>
+
+                <div class="sub-secao">
+                    <h3>Curitiba, Paraná</h3>
+                    <hr>
+                    <div class="pais-container">
+                        <div class="bandeira-box">
+                            <!-- Altere o nome do ficheiro se a sua imagem tiver outra extensão, ex: bandeira-curitiba.jpg -->
+                            <img src="imagens/bandeira-curitiba.jpg" alt="Bandeira Oficial de Curitiba" width="120">
+                            <span class="legenda-bandeira">Bandeira Oficial de Curitiba</span>
+                        </div>
+                        <p>
+                            Curitiba é a capital do estado do Paraná, sendo reconhecida internacionalmente 
+                            pelo seu planejamento urbano inovador, eficiência no transporte público e abundância 
+                            de áreas verdes, parques e bosques encantadores espalhados por toda a cidade.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cartão Direito: Recursos Web Dev -->
+            <section class="card">
+                <h2>Recursos Web Dev</h2>
+                <ul class="recursos-lista">
+                    <li><a href="https://dev.to" target="_blank">Comunidade Dev.to</a></li>
+                    <li><a href="https://smashingmagazine.com" target="_blank">Revista Smashing</a></li>
+                    <li><a href="https://css-tricks.com" target="_blank">CSS Tricks</a></li>
+                    <li><a href="https://www.w3schools.com" target="_blank">W3 Schools</a></li>
+                    <li><a href="https://www.udemy.com" target="_blank">Udemy</a></li>
+                    <li><a href="https://picsum.photos" target="_blank">Imagem de Espaço Reservado Lorem Picsum</a></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="anoatual"></span> 🌸 Eliza Ribeiro 🌸 Paraná, Brasil</p>
+        <p id="ultimaModificacao"></p>
+    </footer>
+</body>
+</html>
