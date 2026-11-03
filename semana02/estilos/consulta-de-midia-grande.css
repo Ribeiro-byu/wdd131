@@ -1,7 +1,12 @@
 @media screen and (min-width: 500px) {
-  h1 {
-   font-size: 2.5rem;
-   margin: 1rem;
-   color: navy;  
+  /* Altera o header para fundo preto e texto branco em telas maiores */
+  header {
+    background-color: #000;
+    color: #fff;
+  }
+
+  /* Faz o main exibir duas colunas lado a lado */
+  main {
+    grid-template-columns: 1fr 1fr;
   }
 }
