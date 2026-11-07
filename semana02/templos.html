@@ -1,83 +1,108 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Álbum do Templo</title>
-  <meta name="description" content="Página de Álbum do Templo responsiva para a disciplina WDD 131.">
-  <meta name="author" content="Elizangela Arcanjo">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Fonts: Roboto e Open Sans -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    <title>Álbum do Templo - Eliza Ribeiro</title>
 
-  <!-- Arquivos CSS -->
-  <link rel="stylesheet" href="estilos/templos.css">
-  <link rel="stylesheet" href="estilos/templos-grandes.css">
+    <meta name="description" content="Álbum de imagens de templos para a disciplina WDD 131.">
+    <meta name="author" content="Eliza Ribeiro">
 
-  <!-- Script JS -->
-  <script src="scripts/templos.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="estilos/templos.css">
+    <link rel="stylesheet" href="estilos/templos-grandes.css">
+
+    <script src="scripts/templos.js" defer></script>
 </head>
+
 <body>
 
-  <header>
-    <div class="header-container">
-      <h1>Álbum do Templo</h1>
-      <!-- Botão Hambúrguer para dispositivos móveis -->
-      <button id="menu" aria-label="Abrir menu de navegação"></button>
-    </div>
-    <nav class="navigation">
-      <a href="#">Página Inicial</a>
-      <a href="#">Antigo</a>
-      <a href="#">Novo</a>
-      <a href="#">Grande</a>
-      <a href="#">Pequeno</a>
-    </nav>
-  </header>
+    <header>
+        <span id="titulo-curso">Álbum do Templo</span>
 
-  <main>
-    <h2>Galeria de Templos</h2>
-    <div class="grid-container">
-  <figure>
-    <img src="imagens/templo da roma italia.jpeg" alt="Templo de Roma, Itália">
-    <figcaption>Templo de Roma, Itália</figcaption>
-  </figure>
-  <figure>
-    <img src="imagens/templo de belem.jpeg" alt="Templo de Belém">
-    <figcaption>Templo de Belém</figcaption>
-  </figure>
-  <figure>
-    <img src="imagens/templo de brasilia.jpeg" alt="Templo de Brasília">
-    <figcaption>Templo de Brasília</figcaption>
-  </figure>
-  <figure>
-    <img src="imagens/templo de curitba.jpeg" alt="Templo de Curitiba">
-    <figcaption>Templo de Curitiba</figcaption>
-  </figure>
-  <figure>
-    <img src="imagens/templo de fortaleza.jpeg" alt="Templo de Fortaleza">
-    <figcaption>Templo de Fortaleza</figcaption>
-  </figure>
-  <figure>
-    <img src="imagens/templo de londrina.jpeg" alt="Templo de Londrina">
-    <figcaption>Templo de Londrina</figcaption>
-  </figure>
-  <figure>
-    <img src="imagens/templo de phoenix arizona.jpeg" alt="Templo de Phoenix, Arizona">
-    <figcaption>Templo de Phoenix, Arizona</figcaption>
-  </figure>
-  <figure>
-    <img src="imagens/templo de rio de janeiro.jpeg" alt="Templo do Rio de Janeiro">
-    <figcaption>Templo do Rio de Janeiro</figcaption>
-  </figure>
-  </div>
-  </main>
+        <button id="menu-button"
+                aria-label="Abrir menu"
+                aria-expanded="false"
+                aria-controls="navigation"
+                type="button">
+            ☰
+        </button>
 
-  <footer>
-    <p>&copy; <span id="currentyear"></span> | Elizangela Arcanjo | Curitiba, Paraná</p>
-    <p id="lastModified"></p>
-  </footer>
+        <nav id="navigation">
+            <a href="index.html">Página Inicial</a>
+            <a href="#galeria">Antigo</a>
+            <a href="#galeria">Novo</a>
+            <a href="#galeria">Grande</a>
+            <a href="#galeria">Pequeno</a>
+        </nav>
+    </header>
+
+    <main id="galeria">
+
+        <h1>Página Inicial</h1>
+
+        <div class="grid-container">
+
+            <figure>
+                <img src="imagens/Templo da Roma Itália.jpeg" alt="Templo de Roma, Itália" loading="lazy">
+                <figcaption>Templo de Roma, Itália</figcaption>
+            </figure>
+
+            <figure>
+                <img src="imagens/Templo de Belém.jpeg" alt="Templo de Belém" loading="lazy">
+                <figcaption>Templo de Belém</figcaption>
+            </figure>
+
+            <figure>
+                <img src="imagens/Templo de Brasília.jpeg" alt="Templo de Brasília" loading="lazy">
+                <figcaption>Templo de Brasília</figcaption>
+            </figure>
+
+            <figure>
+                <img src="imagens/Templo de Curitiba.jpeg" alt="Templo de Curitiba" loading="lazy">
+                <figcaption>Templo de Curitiba</figcaption>
+            </figure>
+
+            <figure>
+                <img src="imagens/Templo de Fortaleza.jpeg" alt="Templo de Fortaleza" loading="lazy">
+                <figcaption>Templo de Fortaleza</figcaption>
+            </figure>
+
+            <figure>
+                <img src="imagens/Templo de Londrina.jpeg" alt="Templo de Londrina" loading="lazy">
+                <figcaption>Templo de Londrina</figcaption>
+            </figure>
+
+            <figure>
+                <img src="imagens/Templo de Phoenix, Arizona.jpeg" alt="Templo de Phoenix, Arizona" loading="lazy">
+                <figcaption>Templo de Phoenix, Arizona</figcaption>
+            </figure>
+
+            <figure>
+                <img src="imagens/Templo do Rio de Janeiro.jpeg" alt="Templo do Rio de Janeiro" loading="lazy">
+                <figcaption>Templo do Rio de Janeiro</figcaption>
+            </figure>
+
+            <figure>
+                <img src="imagens/Templo de Maceió.jpeg" alt="Templo de Maceió" loading="lazy">
+                <figcaption>Templo de Maceió</figcaption>
+            </figure>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            &copy;<span id="currentyear"></span>
+            🌸 Eliza Ribeiro 🌸 Curitiba, Paraná
+        </p>
+        <p id="lastModified"></p>
+    </footer>
 
 </body>
 </html>
+

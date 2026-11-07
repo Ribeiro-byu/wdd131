@@ -1,146 +1,131 @@
-/* Definição de Variáveis de Cores e Tipografia */
-:root {
-  --primary-color: #003366;
-  --secondary-color: #005b96;
-  --accent-color: #ffb703;
-  --text-light: #ffffff;
-  --text-dark: #333333;
-  --background-light: #f4f6f8;
-  --font-heading: 'Roboto', sans-serif;
-  --font-body: 'Open Sans', sans-serif;
-}
-
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  font-family: var(--font-body);
-  color: var(--text-dark);
-  background-color: var(--background-light);
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+    color: #222;
+    line-height: 1.5;
 }
 
-/* Header e Navegação Mobile */
+/* Cabeçalho */
 header {
-  background-color: var(--primary-color);
-  color: var(--text-light);
-  padding: 1rem;
+    background-color: #3e0b60;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1rem;
 }
 
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+#titulo-curso {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+/* Botão do menu */
+#menu-button {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Navegação no celular */
+nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0.8rem 0;
+    gap: 0.5rem;
+}
+
+nav.open {
+    display: flex;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    color: #e6c9ff;
+    text-decoration: underline;
+}
+
+/* Conteúdo principal */
+main {
+    max-width: 850px;
+    margin: 1.5rem auto;
+    padding: 0 1rem;
 }
 
 h1 {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #222;
 }
 
-/* Botão Hambúrguer */
-#menu {
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: var(--text-light);
-  cursor: pointer;
-  padding: 0.2rem 0.5rem;
-}
-
-#menu::before {
-  content: "☰";
-}
-
-#menu.open::before {
-  content: "❌";
-}
-
-/* Navegação Flexbox */
-.navigation {
-  display: none; /* Escondido por padrão no Mobile */
-  flex-direction: column;
-  list-style: none;
-  background-color: var(--secondary-color);
-  margin-top: 1rem;
-}
-
-.navigation.open {
-  display: flex; /* Exibido via JS ao clicar no botão */
-}
-
-.navigation a {
-  display: block;
-  color: var(--text-light);
-  text-decoration: none;
-  padding: 0.75rem 1rem;
-  text-align: center;
-  transition: background-color 0.3s ease;
-}
-
-.navigation a:hover {
-  background-color: var(--accent-color);
-  color: var(--text-dark);
-}
-
-/* Conteúdo Principal */
-main {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 1.5rem 1rem;
-  flex: 1;
-}
-
-main h2 {
-  font-family: var(--font-heading);
-  text-align: center;
-  margin-bottom: 1.5rem;
-  color: var(--primary-color);
-}
-
-/* Grid de Imagens (Mobile: 1 coluna) */
+/* Galeria de imagens */
 .grid-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
 }
 
 figure {
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
+    width: 100%;
+    text-align: center;
 }
 
 figure img {
-  width: 100%;
-  height: auto;
-  display: block;
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
 }
 
 figcaption {
-  padding: 0.8rem;
-  font-weight: 600;
-  color: var(--primary-color);
+    color: #3e0b60;
+    font-size: 0.9rem;
+    padding: 0.2rem;
 }
 
 /* Rodapé */
 footer {
-  background-color: var(--primary-color);
-  color: var(--text-light);
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  margin-top: auto;
+    background-color: #3e0b60;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    margin-top: 2rem;
+    font-size: 0.75rem;
 }
 
-footer p {
-  margin: 0.3rem 0;
+#lastModified {
+    font-size: 0.65rem;
+}
+
+/* Tablets: duas colunas */
+@media screen and (min-width: 600px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Acessibilidade */
+button:focus-visible,
+nav a:focus-visible {
+    outline: 2px solid #ffd700;
+    outline-offset: 3px;
 }

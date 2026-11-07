@@ -1,0 +1,63 @@
+@media screen and (min-width: 768px) {
+
+    /* Cabeçalho */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        padding: 0.8rem 1.5rem;
+    }
+
+    #titulo-curso {
+        font-size: 1.3rem;
+    }
+
+    /* Esconde o botão hambúrguer */
+    #menu-button {
+        display: none;
+    }
+
+    /* Mostra os links na horizontal */
+    nav {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        width: auto;
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+        gap: 1.5rem;
+    }
+
+    nav a {
+        color: white;
+        padding: 0.5rem;
+    }
+
+    nav a:hover {
+        color: #e6c9ff;
+        text-decoration: underline;
+    }
+
+    /* Galeria com três colunas */
+    main {
+        max-width: 1100px;
+        margin: 1.5rem auto;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    figure {
+        width: 100%;
+    }
+
+    figure img {
+        width: 100%;
+        aspect-ratio: 3 / 2;
+        object-fit: cover;
+    }
+}
