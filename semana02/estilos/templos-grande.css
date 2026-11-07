@@ -1,0 +1,33 @@
+@media screen and (min-width: 640px) {
+  
+  /* Esconde o botão hambúrguer em telas maiores */
+  #menu {
+    display: none;
+  }
+
+  /* Ajusta o layout do Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+
+  /* Mostra a navegação em linha horizontal */
+  .navigation {
+    display: flex !important;
+    flex-direction: row;
+    background-color: transparent;
+    margin-top: 0;
+  }
+
+  .navigation a {
+    border-radius: 4px;
+    margin-left: 0.5rem;
+  }
+
+  /* Transforma a galeria em 3 colunas */
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
