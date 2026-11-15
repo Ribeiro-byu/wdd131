@@ -1,0 +1,138 @@
+:root {
+    --cor-primaria: #009c3b;   /* Verde Brasil */
+    --cor-secundaria: #ffdf00; /* Amarelo Brasil */
+    --cor-destaque: #002776;   /* Azul Brasil */
+    --fundo-cartao: rgba(255, 255, 255, 0.95);
+    --texto-escuro: #1a1a1a;
+    --texto-claro: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--texto-escuro);
+    background-color: #f4f4f4;
+    line-height: 1.5;
+}
+
+header {
+    background-color: var(--cor-primaria);
+    color: var(--texto-claro);
+    text-align: center;
+    padding: 1.5rem;
+    border-bottom: 6px solid var(--cor-secundaria);
+}
+
+main {
+    padding: 1rem;
+}
+
+.destaque {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Aplica 100% APENAS na foto de paisagem dentro de <picture> */
+.destaque picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.cartao {
+    background-color: var(--fundo-cartao);
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+}
+
+.cartao h2 {
+    margin-bottom: 0.8rem;
+    color: var(--cor-destaque);
+}
+
+.cartao ul {
+    list-style: none;
+}
+
+.cartao li {
+    margin: 0.4rem 0;
+    font-size: 0.95rem;
+}
+
+/* Tamanho pequeno fixo para o ícone SVG no celular */
+.icone-clima-movel {
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 0 auto 0.8rem auto;
+}
+
+footer {
+    background-color: var(--cor-primaria);
+    color: var(--texto-claro);
+    text-align: center;
+    padding: 1.2rem;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+/* --- VISUALIZAÇÃO AMPLA (COMPUTADOR) --- */
+@media (min-width: 768px) {
+    main {
+        padding: 2rem;
+    }
+
+    .destaque {
+        max-width: 1100px;
+    }
+
+    .cartao {
+        position: absolute;
+        width: 280px;
+        margin-bottom: 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .cartao h2 {
+        background-color: var(--cor-primaria);
+        color: var(--texto-claro);
+        padding: 0.4rem 0.8rem;
+        margin-left: -1.2rem;
+        margin-right: -1.2rem;
+        margin-top: -1.2rem;
+        margin-bottom: 1rem;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+    }
+
+    .dados {
+        top: 25px;
+        left: 25px;
+    }
+
+    .clima {
+        bottom: 25px;
+        right: 25px;
+    }
+
+    /* Esconde totalmente o SVG na tela grande */
+    .icone-clima-movel {
+        display: none !important;
+    }
+
+    /* Mantém apenas o emoticon de sol ao lado do título na tela grande */
+    .clima h2::after {
+        content: " ☀️";
+        margin-left: 0.4rem;
+    }
+}

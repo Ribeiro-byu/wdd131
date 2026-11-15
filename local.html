@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasil - Informações e Clima</title>
+    <meta name="description" content="Página informativa sobre o Brasil com dados gerais e previsão do tempo.">
+    <meta name="author" content="Eliza Ribeiro">
+    
+    <link rel="stylesheet" href="estilos/local.css">
+    <script src="scripts/local.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Brasil</h1>
+    </header>
+
+    <main>
+        <div class="destaque">
+            <picture>
+                <source srcset="imagens/brasil.jpeg" media="(min-width: 768px)">
+                <img src="imagens/brasil.jpeg" alt="Paisagem do Brasil" width="500" height="750">
+            </picture>
+
+            <!-- Cartão de Dados -->
+            <section class="cartao dados">
+                <h2>Dados</h2>
+                <ul>
+                    <li><strong>Área:</strong> 8.515.767 km²</li>
+                    <li><strong>População:</strong> 203.080.756</li>
+                    <li><strong>Capital:</strong> Brasília</li>
+                    <li><strong>Idioma:</strong> Português</li>
+                    <li><strong>Moeda:</strong> Real (BRL)</li>
+                    <li><strong>Fuso Horário:</strong> UTC-3</li>
+                    <li><strong>Código DDI:</strong> +55</li>
+                    <li><strong>Domínio:</strong> .br</li>
+                </ul>
+            </section>
+
+            <!-- Cartão de Clima -->
+            <section class="cartao clima">
+                <h2>Clima</h2>
+                <!-- Ícone SVG para celular -->
+                <img src="imagens/clima.svg" alt="Ícone de sol" class="icone-clima-movel">
+                <ul>
+                    <li><strong>Temperatura:</strong> <span id="temperatura">30</span> °C</li>
+                    <li><strong>Condições:</strong> Ensolarado</li>
+                    <li><strong>Vento:</strong> <span id="vento">5</span> km/h</li>
+                    <li><strong>Sensação Térmica:</strong> <span id="sensacao-termica"></span></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="ano-atual"></span> | Eliza Ribeiro | Brasil</p>
+        <p id="ultima-modificacao"></p>
+    </footer>
+</body>
+</html>
