@@ -41,7 +41,7 @@ main {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Aplica 100% APENAS na foto de paisagem dentro de <picture> */
+/* Aplica width 100% estritamente na imagem principal dentro do picture */
 .destaque picture img {
     width: 100%;
     height: auto;
@@ -69,7 +69,7 @@ main {
     font-size: 0.95rem;
 }
 
-/* Tamanho pequeno fixo para o ícone SVG no celular */
+/* Tamanho fixo do ícone SVG no celular */
 .icone-clima-movel {
     width: 40px;
     height: 40px;
@@ -125,12 +125,12 @@ footer {
         right: 25px;
     }
 
-    /* Esconde totalmente o SVG na tela grande */
-    .icone-clima-movel {
-        display: none !important;
+    /* Oculta o SVG no desktop usando especificidade limpa (sem !important) */
+    .cartao.clima .icone-clima-movel {
+        display: none;
     }
 
-    /* Mantém apenas o emoticon de sol ao lado do título na tela grande */
+    /* Adiciona o emoticon de sol via pseudoelemento na tela grande */
     .clima h2::after {
         content: " ☀️";
         margin-left: 0.4rem;
