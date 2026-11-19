@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 2rem;
+  background-color: #f4f9f8;
+  color: #3b2618;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(59, 38, 24, 0.1);
+}
+
+caption {
+  caption-side: bottom;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-top: 0.75rem;
+  color: #555555;
+}
+
+/* Cabeçalho em verde-água escuro */
+thead th {
+  background-color: #1b7a75;
+  color: #ffffff;
+  padding: 0.85rem;
+  text-align: center;
+  border: 1px solid #b8d8d5;
+}
+
+thead th:first-child {
+  text-align: left;
+}
+
+/* Células do corpo em tom caramelo escuro legível */
+tbody th,
+tbody td {
+  padding: 0.8rem;
+  border: 1px solid #e3ccb0;
+  text-align: center;
+  color: #4a2e1b;
+}
+
+tbody th {
+  text-align: left;
+  font-weight: 600;
+}
+
+/* Listras de zebra em caramelo suave */
+tbody tr:nth-child(even) {
+  background-color: #faefe1;
+}
+
+/* Destaque sutil ao passar o mouse na linha */
+tbody tr:hover {
+  background-color: #e4f4f2;
+}
