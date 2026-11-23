@@ -44,17 +44,19 @@ header {
     background-color: #e6f0f5;
 }
 
-/* Menu de navegação (escondido por padrão em ecrãs pequenos) */
+/* Menu de navegação */
 #navigation {
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
     padding: 10px;
 }
 
-#navigation.open {
-    display: flex;
+@media (max-width: 767px) {
+    #navigation:not(.open) {
+        display: none;
+    }
 }
 
 #navigation a {
