@@ -1,0 +1,167 @@
+/* Configurações gerais */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdf8f5;
+    color: #1f2933;
+    line-height: 1.5;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #1b4965;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 15px;
+}
+
+#titulo-curso {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+/* Botão do menu (ecrãs pequenos) */
+#menu-button {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #1b4965;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 14px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#menu-button:hover {
+    background-color: #e6f0f5;
+}
+
+/* Menu de navegação (escondido por padrão em ecrãs pequenos) */
+#navigation {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+#navigation.open {
+    display: flex;
+}
+
+#navigation a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.12);
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#navigation a:hover {
+    background-color: #e07a5f;
+    color: #ffffff;
+}
+
+/* Título principal da seção */
+main h1 {
+    text-align: center;
+    margin: 28px 15px 10px;
+    font-size: 1.8rem;
+    color: #1b4965;
+}
+
+/* Galeria de templos */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cartões */
+.grid-container figure {
+    margin: 0;
+    padding: 16px;
+    text-align: center;
+    border: 1px solid #d9e2ec;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Títulos dos cartões */
+.grid-container h2 {
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #1b4965;
+}
+
+/* Imagens dos cartões */
+.grid-container img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+/* Textos de informação dos cartões */
+.grid-container p {
+    font-size: 0.95rem;
+    margin: 6px 0;
+    color: #334e68;
+}
+
+/* Rodapé */
+footer {
+    background-color: #1b4965;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 15px;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 6px 0;
+    font-size: 0.95rem;
+}
+
+/* Ecrãs médios e grandes */
+@media (min-width: 768px) {
+    #menu-button {
+        display: none;
+    }
+
+    #titulo-curso {
+        font-size: 2rem;
+    }
+
+    #navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #navigation a {
+        padding: 10px 18px;
+        font-size: 1rem;
+    }
+}
