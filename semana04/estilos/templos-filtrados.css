@@ -144,26 +144,3 @@ footer p {
     margin: 6px 0;
     font-size: 0.95rem;
 }
-
-/* Ecrãs médios e grandes */
-@media (min-width: 768px) {
-    #menu-button {
-        display: none;
-    }
-
-    #titulo-curso {
-        font-size: 2rem;
-    }
-
-    nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    nav a {
-        padding: 10px 18px;
-        font-size: 1rem;
-    }
-}

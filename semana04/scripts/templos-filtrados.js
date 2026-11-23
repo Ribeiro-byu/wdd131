@@ -76,7 +76,6 @@ const tituloSecao = document.querySelector("#titulo-secao");
 const menuButton = document.querySelector("#menu-button");
 const navigation = document.querySelector("#navigation");
 
-// Botão de abrir/fechar menu em ecrãs pequenos
 if (menuButton && navigation) {
     menuButton.addEventListener("click", () => {
         navigation.classList.toggle("open");
@@ -86,12 +85,10 @@ if (menuButton && navigation) {
     });
 }
 
-// Função auxiliar para extrair o ano da string "AAAA, ..."
 function obterAnoConsagracao(dataString) {
     return parseInt(dataString, 10);
 }
 
-// Função para renderizar os cartões na tela
 function mostrarTemplos(listaDeTemplos) {
     galeria.innerHTML = "";
 
@@ -125,7 +122,6 @@ function mostrarTemplos(listaDeTemplos) {
     });
 }
 
-// Eventos dos links de filtro
 document.querySelector("#home").addEventListener("click", (event) => {
     event.preventDefault();
     tituloSecao.textContent = "Página Inicial";
@@ -160,7 +156,6 @@ document.querySelector("#pequenos").addEventListener("click", (event) => {
     mostrarTemplos(filtrados);
 });
 
-// Rodapé: ano atual e última modificação
 const anoSpan = document.querySelector("#currentyear");
 if (anoSpan) {
     anoSpan.textContent = new Date().getFullYear();
@@ -171,5 +166,4 @@ if (ultimaModificacao) {
     ultimaModificacao.textContent = `Última modificação: ${document.lastModified}`;
 }
 
-// Exibe todos os templos ao carregar a página
 mostrarTemplos(templos);
