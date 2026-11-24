@@ -1,5 +1,5 @@
-/* Ecrãs médios e grandes */
 @media (min-width: 768px) {
+
     #menu-button {
         display: none;
     }
@@ -12,7 +12,9 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
+        align-items: center;
         flex-wrap: wrap;
+        gap: 15px;
     }
 
     nav a {

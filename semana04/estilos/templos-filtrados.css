@@ -69,7 +69,8 @@ nav a {
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-nav a:hover {
+nav a:hover,
+nav a.active {
     background-color: #e07a5f;
     color: #ffffff;
 }
@@ -143,4 +144,23 @@ footer {
 footer p {
     margin: 6px 0;
     font-size: 0.95rem;
+}
+/* Menu de navegação em telas maiores */
+@media screen and (min-width: 768px) {
+    nav {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav a {
+        display: inline-block;
+    }
+
+    #menu-button {
+        display: none;
+    }
 }
