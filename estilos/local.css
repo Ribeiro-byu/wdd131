@@ -5,6 +5,7 @@
     --fundo-cartao: rgba(255, 255, 255, 0.95);
     --texto-escuro: #1a1a1a;
     --texto-claro: #ffffff;
+    --verde-rodape: #006b2b;
 }
 
 * {
@@ -33,6 +34,7 @@ main {
 }
 
 .destaque {
+    display: grid;
     position: relative;
     max-width: 900px;
     margin: 0 auto;
@@ -78,7 +80,7 @@ main {
 }
 
 footer {
-    background-color: var(--cor-primaria);
+    background-color: var(--verde-rodape);
     color: var(--texto-claro);
     text-align: center;
     padding: 1.2rem;
