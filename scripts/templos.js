@@ -58,7 +58,7 @@ if (menuButton && navigation) {
     });
 }
 
-// Filtra os templos ao clicar nos botões do menu
+// Filtra os templos ao clicar nos links do menu
 const linksFiltro = document.querySelectorAll("#navigation a[data-filtro]");
 const templos = document.querySelectorAll(".grid-container figure");
 const tituloPrincipal = document.querySelector("main h1");
@@ -71,19 +71,29 @@ const nomesFiltro = {
 };
 
 linksFiltro.forEach((link) => {
-    link.addEventListener("click", () => {
-        const filtro = link.dataset.filtro;
+    link.addEventListener("click", (event) => {
 
-        if (tituloPrincipal && nomesFiltro[filtro]) {
+        event.preventDefault();
+
+        const filtro = link.getAttribute("data-filtro");
+
+        if (tituloPrincipal) {
             tituloPrincipal.textContent = nomesFiltro[filtro];
         }
 
         templos.forEach((templo) => {
-            const idade = templo.dataset.idade;
-            const tamanho = templo.dataset.tamanho;
 
-            const corresponde = (filtro === idade) || (filtro === tamanho);
-            templo.style.display = corresponde ? "" : "none";
+            const idade = templo.getAttribute("data-idade");
+            const tamanho = templo.getAttribute("data-tamanho");
+
+            if (filtro === idade || filtro === tamanho) {
+                templo.style.display = "block";
+            } else {
+                templo.style.display = "none";
+            }
+
         });
+
     });
 });
+alert("Meu JavaScript está funcionando!");
