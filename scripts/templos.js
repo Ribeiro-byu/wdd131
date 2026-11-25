@@ -1,4 +1,4 @@
-
+JavaScript
 // Atualiza o ano do rodapé
 const currentYear = document.querySelector("#currentyear");
 
@@ -49,7 +49,7 @@ if (menuButton && navigation) {
 
     // Fecha o menu quando a tela aumenta
     window.addEventListener("resize", () => {
-        if (window.innerWidth >= 900) {
+        if (window.innerWidth >= 768) {
             navigation.classList.remove("open");
             menuButton.textContent = "☰";
             menuButton.setAttribute("aria-expanded", "false");
@@ -57,3 +57,33 @@ if (menuButton && navigation) {
         }
     });
 }
+
+// Filtra os templos ao clicar nos botões do menu
+const linksFiltro = document.querySelectorAll("#navigation a[data-filtro]");
+const templos = document.querySelectorAll(".grid-container figure");
+const tituloPrincipal = document.querySelector("main h1");
+
+const nomesFiltro = {
+    antigo: "Templos Antigos",
+    novo: "Templos Novos",
+    grande: "Templos Grandes",
+    pequeno: "Templos Pequenos"
+};
+
+linksFiltro.forEach((link) => {
+    link.addEventListener("click", () => {
+        const filtro = link.dataset.filtro;
+
+        if (tituloPrincipal && nomesFiltro[filtro]) {
+            tituloPrincipal.textContent = nomesFiltro[filtro];
+        }
+
+        templos.forEach((templo) => {
+            const idade = templo.dataset.idade;
+            const tamanho = templo.dataset.tamanho;
+
+            const corresponde = (filtro === idade) || (filtro === tamanho);
+            templo.style.display = corresponde ? "" : "none";
+        });
+    });
+});

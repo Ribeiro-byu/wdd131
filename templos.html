@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,20 +25,16 @@
     <header>
         <span id="titulo-curso">Álbum do Templo</span>
 
-        <button id="menu-button"
-                aria-label="Abrir menu"
-                aria-expanded="false"
-                aria-controls="navigation"
-                type="button">
+        <button id="menu-button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navigation" type="button">
             ☰
         </button>
 
         <nav id="navigation">
             <a href="index.html">Página Inicial</a>
-            <a href="#galeria">Antigo</a>
-            <a href="#galeria">Novo</a>
-            <a href="#galeria">Grande</a>
-            <a href="#galeria">Pequeno</a>
+            <a href="#galeria" data-filtro="antigo">Antigo</a>
+            <a href="#galeria" data-filtro="novo">Novo</a>
+            <a href="#galeria" data-filtro="grande">Grande</a>
+            <a href="#galeria" data-filtro="pequeno">Pequeno</a>
         </nav>
     </header>
 
@@ -47,47 +44,47 @@
 
         <div class="grid-container">
 
-            <figure>
+            <figure data-idade="novo" data-tamanho="grande">
                 <img src="imagens/templo-roma-italia.jpeg" alt="Templo de Roma, Itália" loading="lazy">
                 <figcaption>Templo de Roma, Itália</figcaption>
             </figure>
 
-            <figure>
+            <figure data-idade="novo" data-tamanho="pequeno">
                 <img src="imagens/templo-belem.jpeg" alt="Templo de Belém" loading="lazy">
                 <figcaption>Templo de Belém</figcaption>
             </figure>
 
-            <figure>
+            <figure data-idade="antigo" data-tamanho="grande">
                 <img src="imagens/templo-de-brasilia.jpeg" alt="Templo de Brasília" loading="lazy">
                 <figcaption>Templo de Brasília</figcaption>
             </figure>
 
-            <figure>
+            <figure data-idade="antigo" data-tamanho="pequeno">
                 <img src="imagens/templo-de-curitiba.jpeg" alt="Templo de Curitiba" loading="lazy">
                 <figcaption>Templo de Curitiba</figcaption>
             </figure>
 
-            <figure>
+            <figure data-idade="novo" data-tamanho="pequeno">
                 <img src="imagens/templo-de-fortaleza.jpeg" alt="Templo de Fortaleza" loading="lazy">
                 <figcaption>Templo de Fortaleza</figcaption>
             </figure>
 
-            <figure>
+            <figure data-idade="novo" data-tamanho="pequeno">
                 <img src="imagens/templo-de-londrina.jpeg" alt="Templo de Londrina" loading="lazy">
                 <figcaption>Templo de Londrina</figcaption>
             </figure>
 
-            <figure>
+            <figure data-idade="antigo" data-tamanho="grande">
                 <img src="imagens/templo-de-phoenix-arizona.jpeg" alt="Templo de Phoenix, Arizona" loading="lazy">
                 <figcaption>Templo de Phoenix, Arizona</figcaption>
             </figure>
 
-            <figure>
+            <figure data-idade="antigo" data-tamanho="grande">
                 <img src="imagens/templo-de-rio-de-janeiro.jpeg" alt="Templo do Rio de Janeiro" loading="lazy">
                 <figcaption>Templo do Rio de Janeiro</figcaption>
             </figure>
 
-            <figure>
+            <figure data-idade="novo" data-tamanho="pequeno">
                 <img src="imagens/templo-maceio.jpeg" alt="Templo de Maceió" loading="lazy">
                 <figcaption>Templo de Maceió</figcaption>
             </figure>
@@ -104,5 +101,5 @@
     </footer>
 
 </body>
-</html>
 
+</html>
