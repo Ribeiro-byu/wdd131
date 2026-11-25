@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brasil - Informações e Clima</title>
     <meta name="description" content="Página informativa sobre o Brasil com dados gerais e previsão do tempo.">
-    <meta name="author" content="Eliza Ribeiro">
-    
+    <meta name="author" content="Elizangela Arcanjo Ribeiro">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="estilos/local.css">
     <script src="scripts/local.js" defer></script>
 </head>
+
 <body>
     <header>
         <h1>Brasil</h1>
@@ -18,7 +24,6 @@
     <main>
         <div class="destaque">
             <picture>
-                <!-- Alterado de .jpeg para .webp conforme exigência da auditoria -->
                 <source srcset="imagens/brasil.webp" media="(min-width: 768px)">
                 <img src="imagens/brasil.webp" alt="Paisagem do Brasil" width="500" height="750">
             </picture>
@@ -41,8 +46,7 @@
             <!-- Cartão de Clima -->
             <section class="cartao clima">
                 <h2>Clima</h2>
-                <!-- Ícone SVG para celular -->
-                <img src="imagens/clima.svg" alt="Ícone de sol" class="icone-clima-movel">
+                <img src="imagens/clima.svg" alt="Ícone de sol" class="icone-clima-movel" width="64" height="64">
                 <ul>
                     <li><strong>Temperatura:</strong> <span id="temperatura">30</span> °C</li>
                     <li><strong>Condições:</strong> Ensolarado</li>
@@ -58,4 +62,5 @@
         <p id="ultima-modificacao"></p>
     </footer>
 </body>
+
 </html>
