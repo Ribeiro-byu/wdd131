@@ -1,4 +1,4 @@
-JavaScript
+
 // Atualiza o ano do rodapé
 const currentYear = document.querySelector("#currentyear");
 
@@ -96,4 +96,3 @@ linksFiltro.forEach((link) => {
 
     });
 });
-alert("Meu JavaScript está funcionando!");
