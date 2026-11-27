@@ -1,13 +1,14 @@
 :root {
-    --cor-primaria: #7a2e4d;       /* Vinho-rosado escuro com bom contraste */
+    --cor-primaria: #7a2e4d;       
     --cor-primaria-hover: #5e2039;
-    --cor-secundaria: #d96b94;     /* Rosa pastel para estrelas e detalhes */
-    --cor-fundo: #fdf2f6;          /* Fundo rosa pastel bem suave */
-    --cor-cartao: #fffafc;         /* Cartão central claro e acolhedor */
+    --cor-secundaria: #d96b94;     
+    --cor-fundo: #fdf2f6;         
+    --cor-cartao: #fffafc;         
     --cor-texto: #2b1920;
     --cor-texto-suave: #664854;
     --cor-borda: #eccbd7;
     --cor-destaque-suave: #f9e3ec;
+    --cor-foco: rgba(217, 107, 148, 0.28);
     --raio-borda: 10px;
 }
 
@@ -118,7 +119,7 @@ input:focus,
 textarea:focus {
     outline: none;
     border-color: var(--cor-primaria);
-    box-shadow: 0 0 0 3px rgba(217, 107, 148, 0.28);
+    box-shadow: 0 0 0 3px var(--cor-foco);
 }
 
 /* Avaliação por estrelas */
