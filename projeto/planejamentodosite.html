@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Documento de planejamento do site Brechó da Gui — catálogo virtual, moda sustentável e desapego consciente.">
+    <meta name="author" content="Eliza Ribeiro">
+    <title>Planejamento do Site — Brechó da Gui</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="estilos/planejamentodosite.css">
+    <link rel="icon" href="data:,">
+</head>
+
+<body>
+
+    <header>
+        <h1>Planejamento do Site: Brechó da Gui</h1>
+        <p>Documento de arquitetura, identidade visual e estrutura para o projeto final (WDD 131).</p>
+    </header>
+
+    <main>
+        <section id="nome-site" class="card">
+            <h2>1. Nome do Site</h2>
+            <p><strong>Nome escolhido:</strong> Brechó da Gui</p>
+            <p><strong>Domínio sugerido (opcional):</strong> <code>brechodagui.com.br</code></p>
+            <p><strong>Motivo da escolha:</strong> O nome preserva a essência e o carinho do brechó físico da minha tia,
+                trazendo para o ambiente digital a mesma proximidade de uma loja de bairro.
+                Ele transmite a confiança de quem escolhe cada peça a dedo e valoriza o cuidado genuíno com os clientes.
+            </p>
+        </section>
+
+        <section id="finalidade" class="card">
+            <h2>2. Finalidade do Site</h2>
+            <p>O site funcionará como vitrine digital e catálogo virtual para o <strong>Brechó da Gui</strong>,
+                promovendo a moda sustentável e o consumo consciente. Ele será dividido em três páginas principais:</p>
+            <ul>
+                <li><strong>Página Inicial:</strong> Apresenta a história do brechó, a importância da moda circular e os
+                    destaques da semana.</li>
+                <li><strong>Catálogo de Peças e Compra:</strong> Exibe as peças disponíveis com fotos, tamanhos e
+                    preços, permitindo filtrar por categoria e tamanho, adicionar itens a uma sacola virtual, calcular
+                    automaticamente o frete (ou retirada na loja) e finalizar o pedido com resumo na tela.</li>
+                <li><strong>Contato e Desapego:</strong> Informa o endereço, horário de atendimento e disponibiliza um
+                    formulário interativo para dúvidas ou envio de peças para venda e consignação.</li>
+            </ul>
+        </section>
+
+        <section id="cenarios" class="card">
+            <h2>3. Cenários (Público-Alvo)</h2>
+            <div class="cenario-item">
+                <h3>Cenário 1 — Busca por tamanho específico e frete</h3>
+                <p><strong>Pergunta do visitante:</strong> <em>"Quero encontrar casacos ou calças no tamanho M sem
+                        precisar sair de casa para garimpar — consigo filtrar por tamanho e saber quanto fica o frete
+                        para o meu bairro?"</em></p>
+                <p><strong>Resposta do site:</strong> Na página de Catálogo, o cliente filtra as peças por categoria e
+                    tamanho, adiciona os itens à sacola, seleciona a opção de entrega ou retirada e visualiza o valor
+                    total atualizado automaticamente.</p>
+            </div>
+
+            <div class="cenario-item">
+                <h3>Cenário 2 — Venda ou consignação de roupas (Desapego)</h3>
+                <p><strong>Pergunta do visitante:</strong> <em>"Tenho roupas em ótimo estado paradas no guarda-roupa e
+                        quero saber como funciona para vender ou deixar em consignação no brechó."</em></p>
+                <p><strong>Resposta do site:</strong> A página "Contato e Desapego" explica as regras de recebimento,
+                    mostra o endereço e horário da loja e oferece um formulário para envio dos dados das peças.</p>
+            </div>
+        </section>
+
+        <section id="cores" class="card">
+            <h2>4. Esquema de Cores</h2>
+            <p>A paleta foi escolhida para transmitir naturalidade, sustentabilidade e aconchego, mantendo alto
+                contraste entre texto e fundo (padrão WCAG):</p>
+
+            <div class="paleta-grid">
+                <div class="cor-amostra cor-verde">
+                    <strong>Verde Água Profundo</strong>
+                    <span>#1F5E5B</span>
+                    <small>Cabeçalho, rodapé, títulos principais e botões primários.</small>
+                </div>
+
+                <div class="cor-amostra cor-caramelo">
+                    <strong>Caramelo Terracota</strong>
+                    <span>#9E5A2B</span>
+                    <small>Botões secundários, etiquetas de preço e destaques.</small>
+                </div>
+
+                <div class="cor-amostra cor-creme">
+                    <strong>Creme Suave</strong>
+                    <span>#FAF7F2</span>
+                    <small>Fundo geral das páginas (body).</small>
+                </div>
+
+                <div class="cor-amostra cor-branco">
+                    <strong>Branco Puro</strong>
+                    <span>#FFFFFF</span>
+                    <small>Fundo dos cartões de produtos e formulários.</small>
+                </div>
+
+                <div class="cor-amostra cor-grafite">
+                    <strong>Grafite Escuro</strong>
+                    <span>#222222</span>
+                    <small>Textos corridos, descrições e rótulos.</small>
+                </div>
+            </div>
+        </section>
+
+        <section id="tipografia" class="card">
+            <h2>5. Tipografia</h2>
+            <p>Foram selecionadas duas fontes do Google Fonts para equilibrar elegância editorial e facilidade de
+                leitura:</p>
+            <ul>
+                <li>
+                    <span class="exemplo-titulo">Playfair Display (Serifada)</span> — Utilizada nos títulos principais
+                    (<code>h1</code>, <code>h2</code>, <code>h3</code>) e no nome da marca, trazendo um visual clássico
+                    de boutique e curadoria.
+                </li>
+                <li>
+                    <span class="exemplo-corpo">Inter (Sem Serifa)</span> — Utilizada no corpo do texto, menus de
+                    navegação, preços, botões e formulários, garantindo ótima legibilidade em telas móveis e desktop.
+                </li>
+            </ul>
+        </section>
+
+        <section id="wireframes" class="card">
+            <h2>6. Wireframes da Página Inicial</h2>
+            <p>Esboço estrutural da página inicial para visualização em dispositivos móveis (coluna única) e telas
+                largas / desktop (grade em colunas):</p>
+
+            <div class="wireframes-container">
+                <div class="wireframe-box mobile-wf">
+                    <h3>Visualização Mobile (Tela Estreita)</h3>
+                    <div class="wf-frame">
+                        <div class="wf-block wf-header">Cabeçalho: Logo "Brechó da Gui" + Menu (☰)</div>
+                        <div class="wf-block wf-hero">Banner Hero: Foto + Chamada Moda Sustentável + Botão "Ver
+                            Catálogo"</div>
+                        <div class="wf-block">Seção História do Brechó (Texto + Imagem empilhados)</div>
+                        <div class="wf-block">
+                            <strong>Destaques da Semana (1 coluna)</strong>
+                            <div class="wf-sub">Card Peça 1 (Foto, Nome, Tamanho, Preço)</div>
+                            <div class="wf-sub">Card Peça 2 (Foto, Nome, Tamanho, Preço)</div>
+                            <div class="wf-sub">Card Peça 3 (Foto, Nome, Tamanho, Preço)</div>
+                        </div>
+                        <div class="wf-block">Chamada para Desapego + Botão "Quero Desapegar"</div>
+                        <div class="wf-block wf-footer">Rodapé: Endereço, Horário e Link Referências</div>
+                    </div>
+                </div>
+
+                <div class="wireframe-box desktop-wf">
+                    <h3>Visualização Desktop (Tela Larga)</h3>
+                    <div class="wf-frame">
+                        <div class="wf-block wf-header">Cabeçalho: Logo à esquerda | Links (Início • Catálogo • Contato
+                            e Desapego) à direita</div>
+                        <div class="wf-block wf-row-2">
+                            <div class="wf-col">Banner Hero: Título, texto sobre moda circular e botão "Ver Catálogo"
+                            </div>
+                            <div class="wf-col">Imagem destaque do brechó</div>
+                        </div>
+                        <div class="wf-block wf-row-2">
+                            <div class="wf-col">Foto da loja / curadoria</div>
+                            <div class="wf-col">Nossa História &amp; Consumo Consciente</div>
+                        </div>
+                        <div class="wf-block">
+                            <strong>Destaques da Semana (3 colunas lado a lado)</strong>
+                            <div class="wf-row-3">
+                                <div class="wf-sub">Card Peça 1</div>
+                                <div class="wf-sub">Card Peça 2</div>
+                                <div class="wf-sub">Card Peça 3</div>
+                            </div>
+                        </div>
+                        <div class="wf-block">Faixa Horizontal: Chamada para Desapego (Texto à esquerda + Botão à
+                            direita)</div>
+                        <div class="wf-block wf-footer">Rodapé (3 colunas): Sobre/Endereço | Links Rápidos | Horário
+                            &amp; Link Referências</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Eliza Ribeiro — WDD 131 | Projeto: Brechó da Gui</p>
+    </footer>
+
+</body>
+
+</html>

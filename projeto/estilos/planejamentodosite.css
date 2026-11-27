@@ -1,0 +1,248 @@
+:root {
+  --cor-primaria: #1F5E5B;
+  --cor-secundaria: #9E5A2B;
+  --cor-fundo: #FAF7F2;
+  --cor-cartao: #FFFFFF;
+  --cor-texto: #222222;
+  --cor-borda: #D8D2C7;
+
+  --fonte-titulo: 'Playfair Display', Georgia, serif;
+  --fonte-corpo: 'Inter', Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: var(--fonte-corpo);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--cor-primaria);
+  color: #FFFFFF;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-bottom: 4px solid var(--cor-secundaria);
+}
+
+header h1 {
+  font-family: var(--fonte-titulo);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+main {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: var(--cor-cartao);
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+h2 {
+  font-family: var(--fonte-titulo);
+  color: var(--cor-primaria);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--cor-secundaria);
+}
+
+h3 {
+  font-family: var(--fonte-titulo);
+  color: var(--cor-secundaria);
+  font-size: 1.15rem;
+  margin-bottom: 0.4rem;
+}
+
+p {
+  margin-bottom: 0.75rem;
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.6rem;
+}
+
+code {
+  background-color: var(--cor-fundo);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.cenario-item {
+  background-color: var(--cor-fundo);
+  border-left: 4px solid var(--cor-primaria);
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.cenario-item:last-child {
+  margin-bottom: 0;
+}
+
+.paleta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.cor-amostra {
+  padding: 1rem;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.cor-amostra span {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.cor-verde {
+  background-color: #1F5E5B;
+  color: #FFFFFF;
+}
+
+.cor-caramelo {
+  background-color: #9E5A2B;
+  color: #FFFFFF;
+}
+
+.cor-creme {
+  background-color: #FAF7F2;
+  color: #222222;
+  border: 1px solid #D8D2C7;
+}
+
+.cor-branco {
+  background-color: #FFFFFF;
+  color: #222222;
+  border: 1px solid #D8D2C7;
+}
+
+.cor-grafite {
+  background-color: #222222;
+  color: #FFFFFF;
+}
+
+.exemplo-titulo {
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--cor-primaria);
+}
+
+.exemplo-corpo {
+  font-family: var(--fonte-corpo);
+  font-weight: 600;
+}
+
+.wireframes-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .wireframes-container {
+    grid-template-columns: 1fr 1.6fr;
+  }
+}
+
+.wf-frame {
+  border: 2px solid var(--cor-primaria);
+  background-color: var(--cor-fundo);
+  padding: 0.75rem;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.wf-block {
+  background-color: #FFFFFF;
+  border: 1px dashed var(--cor-secundaria);
+  padding: 0.65rem;
+  font-size: 0.85rem;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.wf-header,
+.wf-footer {
+  background-color: var(--cor-primaria);
+  color: #FFFFFF;
+  border: none;
+  font-weight: 600;
+}
+
+.wf-hero {
+  background-color: #EAE4D7;
+  font-weight: 600;
+  padding: 1rem 0.65rem;
+}
+
+.wf-sub {
+  background-color: var(--cor-fundo);
+  border: 1px solid var(--cor-borda);
+  padding: 0.5rem;
+  margin-top: 0.4rem;
+  border-radius: 4px;
+}
+
+.wf-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.wf-row-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.wf-col {
+  background-color: var(--cor-fundo);
+  border: 1px solid var(--cor-borda);
+  padding: 0.6rem;
+  border-radius: 4px;
+}
+
+footer {
+  background-color: var(--cor-primaria);
+  color: #FFFFFF;
+  text-align: center;
+  padding: 1.25rem 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
