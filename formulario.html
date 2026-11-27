@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação de Produto | WDD 131</title>
+    <meta name="description" content="Formulário de avaliação de produtos desenvolvido para a disciplina WDD 131.">
+    <meta name="author" content="Eliza Ribeiro">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="estilos/formulario.css">
+    <script src="scripts/formulario.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Avaliação de Produto</h1>
+    </header>
+
+    <main>
+        <form method="get" action="avaliacao.html" class="formulario-avaliacao">
+
+            <!-- Nome do Produto -->
+            <div class="campo-grupo">
+                <label for="nome-produto">Nome do Produto <span class="obrigatorio">*</span></label>
+                <select id="nome-produto" name="produto" required>
+                    <option value="" disabled selected>Selecione um Produto...</option>
+                    <!-- As opções serão inseridas dinamicamente via JavaScript -->
+                </select>
+            </div>
+
+            <!-- Classificação Geral (Estrelas interativas) -->
+            <fieldset class="campo-grupo grupo-estrelas">
+                <legend>Classificação Geral <span class="obrigatorio">*</span></legend>
+                <div class="estrelas-container">
+                    <input type="radio" id="estrela5" name="classificacao" value="5" required>
+                    <label for="estrela5" title="5 estrelas">&starf;</label>
+
+                    <input type="radio" id="estrela4" name="classificacao" value="4" required>
+                    <label for="estrela4" title="4 estrelas">&starf;</label>
+
+                    <input type="radio" id="estrela3" name="classificacao" value="3" required>
+                    <label for="estrela3" title="3 estrelas">&starf;</label>
+
+                    <input type="radio" id="estrela2" name="classificacao" value="2" required>
+                    <label for="estrela2" title="2 estrelas">&starf;</label>
+
+                    <input type="radio" id="estrela1" name="classificacao" value="1" required>
+                    <label for="estrela1" title="1 estrela">&starf;</label>
+                </div>
+            </fieldset>
+
+            <!-- Data de Instalação -->
+            <div class="campo-grupo">
+                <label for="data-instalacao">Data de Instalação <span class="obrigatorio">*</span></label>
+                <input type="date" id="data-instalacao" name="dataInstalacao" required>
+            </div>
+
+            <!-- Recursos Úteis -->
+            <fieldset class="campo-grupo grupo-checkbox">
+                <legend>Quais recursos você achou úteis no produto? <em>(Marque todos os aplicáveis)</em></legend>
+
+                <div class="checkbox-item">
+                    <input type="checkbox" id="recurso-durabilidade" name="recursos" value="durabilidade">
+                    <label for="recurso-durabilidade">Durabilidade</label>
+                </div>
+
+                <div class="checkbox-item">
+                    <input type="checkbox" id="recurso-facilidade" name="recursos" value="facilidade-uso">
+                    <label for="recurso-facilidade">Facilidade de Uso</label>
+                </div>
+
+                <div class="checkbox-item">
+                    <input type="checkbox" id="recurso-desempenho" name="recursos" value="desempenho">
+                    <label for="recurso-desempenho">Desempenho</label>
+                </div>
+
+                <div class="checkbox-item">
+                    <input type="checkbox" id="recurso-design" name="recursos" value="design">
+                    <label for="recurso-design">Design</label>
+                </div>
+            </fieldset>
+
+            <!-- Avaliação Escrita -->
+            <div class="campo-grupo">
+                <label for="avaliacao-escrita">Avaliação Escrita <span class="opcional">(Opcional)</span></label>
+                <textarea id="avaliacao-escrita" name="avaliacaoEscrita" rows="4" placeholder="Conte-nos sua experiência com o produto..."></textarea>
+            </div>
+
+            <!-- Nome de Usuário -->
+            <div class="campo-grupo">
+                <label for="nome-usuario">Seu Nome <span class="opcional">(Opcional)</span></label>
+                <input type="text" id="nome-usuario" name="nomeUsuario" placeholder="Digite seu nome">
+            </div>
+
+            <!-- Botão de Envio -->
+            <div class="campo-grupo">
+                <input type="submit" value="Enviar Avaliação" class="btn-enviar">
+            </div>
+
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="ano-atual"></span> | Eliza Ribeiro | Curitiba, Brasil</p>
+        <p>Última modificação: <span id="ultima-modificacao"></span></p>
+    </footer>
+</body>
+</html>

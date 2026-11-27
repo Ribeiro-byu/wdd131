@@ -1,0 +1,271 @@
+:root {
+    --cor-primaria: #7a2e4d;       /* Vinho-rosado escuro com bom contraste */
+    --cor-primaria-hover: #5e2039;
+    --cor-secundaria: #d96b94;     /* Rosa pastel para estrelas e detalhes */
+    --cor-fundo: #fdf2f6;          /* Fundo rosa pastel bem suave */
+    --cor-cartao: #fffafc;         /* Cartão central claro e acolhedor */
+    --cor-texto: #2b1920;
+    --cor-texto-suave: #664854;
+    --cor-borda: #eccbd7;
+    --cor-destaque-suave: #f9e3ec;
+    --raio-borda: 10px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    box-shadow: 0 2px 6px rgba(122, 46, 77, 0.14);
+}
+
+header h1 {
+    font-size: 1.55rem;
+    font-weight: 700;
+}
+
+.subtitulo-header {
+    font-size: 0.95rem;
+    color: #f8dce6;
+    margin-top: 0.25rem;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 580px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Cartão único centralizado */
+.formulario-avaliacao,
+.cartao-confirmacao {
+    background-color: var(--cor-cartao);
+    padding: 2rem;
+    border-radius: var(--raio-borda);
+    box-shadow: 0 4px 14px rgba(122, 46, 77, 0.08);
+    border-top: 5px solid var(--cor-secundaria);
+    border-left: 1px solid var(--cor-borda);
+    border-right: 1px solid var(--cor-borda);
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.boas-vindas {
+    color: var(--cor-texto-suave);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.campo-grupo {
+    margin-bottom: 1.4rem;
+    border: none;
+}
+
+label,
+legend {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.45rem;
+    color: var(--cor-primaria);
+    font-size: 0.95rem;
+}
+
+.obrigatorio {
+    color: #a61b4b;
+}
+
+.opcional {
+    font-weight: 400;
+    color: var(--cor-texto-suave);
+    font-size: 0.85rem;
+}
+
+/* Campos do formulário */
+select,
+input[type="date"],
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1.5px solid var(--cor-borda);
+    border-radius: var(--raio-borda);
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--cor-texto);
+    background-color: #ffffff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+select:focus,
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 3px rgba(217, 107, 148, 0.28);
+}
+
+/* Avaliação por estrelas */
+.estrelas-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 0.35rem;
+}
+
+.estrelas-container input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.estrelas-container label {
+    font-size: 2.2rem;
+    color: #e8cdd7;
+    cursor: pointer;
+    margin-bottom: 0;
+    line-height: 1;
+    transition: color 0.15s ease-in-out;
+}
+
+.estrelas-container input[type="radio"]:checked ~ label,
+.estrelas-container label:hover,
+.estrelas-container label:hover ~ label {
+    color: var(--cor-secundaria);
+}
+
+.estrelas-container input[type="radio"]:focus-visible + label {
+    outline: 2px solid var(--cor-primaria);
+    border-radius: 4px;
+}
+
+/* Checkboxes */
+.grupo-checkbox legend em {
+    font-weight: 400;
+    color: var(--cor-texto-suave);
+    font-size: 0.85rem;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 0.5rem;
+}
+
+.checkbox-item input[type="checkbox"] {
+    width: 1.15rem;
+    height: 1.15rem;
+    accent-color: var(--cor-primaria);
+    cursor: pointer;
+}
+
+.checkbox-item label {
+    margin-bottom: 0;
+    font-weight: 400;
+    color: var(--cor-texto);
+    cursor: pointer;
+}
+
+/* Botões */
+.btn-enviar,
+.btn-voltar {
+    display: inline-block;
+    width: 100%;
+    padding: 0.9rem 1.5rem;
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: var(--raio-borda);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-enviar:hover,
+.btn-voltar:hover {
+    background-color: var(--cor-primaria-hover);
+}
+
+/* Página de confirmação */
+.cartao-confirmacao {
+    text-align: center;
+}
+
+.icone-sucesso {
+    width: 60px;
+    height: 60px;
+    background-color: var(--cor-destaque-suave);
+    color: var(--cor-primaria);
+    font-size: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.cartao-confirmacao h2 {
+    color: var(--cor-primaria);
+    margin-bottom: 0.5rem;
+}
+
+.caixa-contador {
+    background-color: var(--cor-destaque-suave);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-borda);
+    padding: 1rem;
+    margin: 1.5rem 0;
+    font-size: 1.05rem;
+}
+
+.caixa-contador strong {
+    color: var(--cor-primaria);
+    font-size: 1.3rem;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+    text-align: center;
+    padding: 1.2rem 1rem;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+footer p + p {
+    margin-top: 0.25rem;
+    color: #f8dce6;
+}
+
+@media (max-width: 480px) {
+    .formulario-avaliacao,
+    .cartao-confirmacao {
+        padding: 1.25rem;
+    }
+
+    header h1 {
+        font-size: 1.35rem;
+    }
+}

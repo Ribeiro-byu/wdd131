@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação Enviada | WDD 131</title>
+    <meta name="description" content="Confirmação de envio da avaliação de produto.">
+    <meta name="author" content="Eliza Ribeiro">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="estilos/formulario.css">
+    <script src="scripts/avaliacao.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Avaliação de Produto</h1>
+    </header>
+
+    <main>
+        <section class="cartao-confirmacao">
+            <div class="icone-sucesso" aria-hidden="true">&#10004;</div>
+            <h2>Obrigado pela sua avaliação!</h2>
+            <p>Seu feedback foi registrado com sucesso e ajudará outros clientes.</p>
+            
+            <div class="caixa-contador">
+                <p>Total de avaliações enviadas por você: <strong id="contador-avaliacoes">0</strong></p>
+            </div>
+
+            <a href="formulario.html" class="btn-voltar">Enviar outra avaliação</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="ano-atual"></span> | Eliza Ribeiro | Curitiba, Brasil</p>
+        <p>Última modificação: <span id="ultima-modificacao"></span></p>
+    </footer>
+</body>
+</html>
